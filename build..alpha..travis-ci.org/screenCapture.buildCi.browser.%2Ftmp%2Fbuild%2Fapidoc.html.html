@@ -56,6 +56,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.node-etcd.node-etcd">
+            function <span class="apidocSignatureSpan"></span>node-etcd
+            <span class="apidocSignatureSpan">(hosts, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.node-etcd.client">
             function <span class="apidocSignatureSpan">node-etcd.</span>client
             <span class="apidocSignatureSpan">(hosts, options1, sslopts)</span>
@@ -394,6 +403,29 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.node-etcd" id="apidoc.module.node-etcd">module node-etcd</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.node-etcd.node-etcd" id="apidoc.element.node-etcd.node-etcd">
+        function <span class="apidocSignatureSpan"></span>node-etcd
+        <span class="apidocSignatureSpan">(hosts, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Etcd(hosts, options) {
+  if (hosts == null) {
+    hosts = "127.0.0.1:2379";
+  }
+  if (options == null) {
+    options = {};
+  }
+  this.watcher = bind(this.watcher, this);
+  this.hosts = this._cleanHostList(hosts);
+  this.client = new Client(this.hosts, options, null);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
